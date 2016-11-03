@@ -15,7 +15,7 @@ def fetch_url(url):
     html = urlHandler.read()
     print("'%s\' fetched in %ss" % (url, (time.time() - start)))
 
-with Pool(100) as p:
+with Pool(200) as p:
     p.map(fetch_url, urls)
 
 print("Elapsed Time: %s" % (time.time() - start))
